@@ -1,0 +1,20 @@
+img {
+  width: 40px;
+}
+
+.title {
+  font-size: 30px;
+  padding: 5px;
+  color: #db2b2b;
+}
+
+.btn {
+  /* border: 2px solid #db2b2b; */
+  /* padding: 5px; */
+  border-radius: 8px;
+  background-color: #fff;
+}
+li {
+  padding-right: 30px;
+  border-right: 2px dotted white;
+}

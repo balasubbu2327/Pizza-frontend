@@ -1,0 +1,17 @@
+.product_temp_card {
+  width: 18rem;
+  height: 17rem;
+  transition: transform 0.3s;
+  background-color: white;
+}
+.product_temp_card:hover {
+  transform: scale(1.1);
+}
+
+/* body {
+  background-image: url("http://cdn.shopify.com/s/files/1/1008/8768/products/homeby-pizza-mural1_1024x1024.jpg?v=1614776143") !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+} */
