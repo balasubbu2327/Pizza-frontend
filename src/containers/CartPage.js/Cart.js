@@ -82,7 +82,7 @@ export default function Cart() {
               <span className="fw-bold fs-4">₹ {Math.round(total)}</span>
             </h6>
             <StripeCheckout
-              name="Bala'sPizza"
+              name="Bala's Pizza"
               billingAddress
               shippingAddress
               description={`Your amount is ₹ ${total}`}
