@@ -82,13 +82,13 @@ export default function Cart() {
               <span className="fw-bold fs-4">₹ {Math.round(total)}</span>
             </h6>
             <StripeCheckout
-              name="NoodleCountry"
+              name="Bala's Pizza"
               billingAddress
               shippingAddress
               description={`Your amount is ₹ ${total}`}
               amount={total * 100}
               token={handleToken}
-              currency="usd"
+              currency="inr"
               stripeKey={KEY}
             >
               <button className="btn btn-outline-danger text-primary fw-bold">
