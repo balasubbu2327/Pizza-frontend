@@ -26,13 +26,17 @@ export default function Cart() {
 
   async function handleToken(token, addresses) {
     const response = await axios.post(
-      `http://localhost:5000/checkout/payment`,
+      `https://pizzas001.herokuapp.com/checkout/payment`,
       {
         token,
         product,
       }
     );
-    await axios.post(`http://localhost:5000/orders`, { token, product, total });
+    await axios.post(`https://pizzas001.herokuapp.com/orders`, {
+      token,
+      product,
+      total,
+    });
 
     navigate("/success");
     if (response === 200) {

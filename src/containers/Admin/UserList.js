@@ -21,7 +21,7 @@ export default function UserList() {
   // get users details
   const getUsers = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/users`);
+      const { data } = await axios.get(`https://pizzas001.herokuapp.com/users`);
       setUsers(data);
       setIsLoading(false);
     } catch (error) {
@@ -37,7 +37,9 @@ export default function UserList() {
   const deleteUser = async ({ fullname, _id }) => {
     if (window.confirm(`Are You Sure Delete This User ${fullname}`)) {
       try {
-        await axios.delete(`http://localhost:5000/users/${_id}`, { _id });
+        await axios.delete(`https://pizzas001.herokuapp.com/users/${_id}`, {
+          _id,
+        });
         alert("Deleted Successfully");
         getUsers();
       } catch (error) {
@@ -135,7 +137,9 @@ export function UserInfo() {
 
   const getUserInfo = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/users/${id}`);
+      const { data } = await axios.get(
+        `https://pizzas001.herokuapp.com/users/${id}`
+      );
       setUsers(data);
       console.log(data);
     } catch (error) {

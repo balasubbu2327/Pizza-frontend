@@ -18,7 +18,9 @@ export default function OrderList() {
   // get users details
   const getUsers = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/orders`);
+      const { data } = await axios.get(
+        `https://pizzas001.herokuapp.com/orders`
+      );
       setUsers(data);
       setIsLoading(false);
     } catch (error) {
@@ -30,7 +32,9 @@ export default function OrderList() {
   const deleteOrder = async ({ _id }) => {
     if (window.confirm(`Are You Sure Delete This order`)) {
       try {
-        await axios.delete(`http://localhost:5000/orders/${_id}`, { _id });
+        await axios.delete(`https://pizzas001.herokuapp.com/orders/${_id}`, {
+          _id,
+        });
         alert("Deleted Successfully");
         getUsers();
       } catch (error) {
@@ -135,7 +139,9 @@ export function OrdersInfo() {
 
   const getOrderInfo = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/orders/${id}`);
+      const { data } = await axios.get(
+        `https://pizzas001.herokuapp.com/orders/${id}`
+      );
       setOrders(data);
       setIsLoading(false);
     } catch (error) {

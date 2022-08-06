@@ -13,7 +13,9 @@ export default function Products() {
   const [isLoading, setIsLoading] = useState(true);
   const getProducts = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:5000/products`);
+      const { data } = await axios.get(
+        `https://pizzas001.herokuapp.com/products`
+      );
       setProducts(data);
       setIsLoading(false);
     } catch (error) {

@@ -41,7 +41,7 @@ export default function SignUpPage() {
               onSubmit={async (values) => {
                 try {
                   await axios.post(
-                    `http://localhost:5000/auth/register`,
+                    `https://pizzas001.herokuapp.com/auth/register`,
                     values
                   );
                   console.log(values);
