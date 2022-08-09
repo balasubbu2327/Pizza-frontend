@@ -15,8 +15,12 @@ export default function UserNavbar() {
     <div>
       <nav class="navbar navbar-expand-lg bg-primary text-center mt-1">
         <div class="container">
-          <Link class="navbar-brand fw-bold text-danger" to="/">
-            Bala's<span className="text-white">Pizza</span>
+          <Link class="navbar-brand fw-bold text-white" to="/">
+            <img
+              src="https://pngimg.com/uploads/letter_b/small/letter_b_PNG24.png"
+              alt="logo"
+            />
+            Bala's<span className="text-white"> Pizza</span>
           </Link>
           <button
             class="navbar-toggler"

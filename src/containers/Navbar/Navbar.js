@@ -8,7 +8,7 @@ export default function Navbar() {
     <div>
       <nav class="navbar navbar-expand-lg bg-primary text-center mt-1">
         <div class="container">
-          <Link class="navbar-brand fw-bold title" to="/">
+          <Link class="navbar-brand fw-bold text-white title" to="/">
             <img
               src="https://pngimg.com/uploads/letter_b/small/letter_b_PNG24.png"
               alt="logo"
