@@ -22,7 +22,7 @@ export default function FoodList() {
   const getFoodList = async () => {
     try {
       const { data } = await axios.get(
-        `https://pizzas001.herokuapp.com/products`
+        `https://pizza-joth.onrender.com/products`
       );
       setFoodList(data);
       setIsLoading(false);
@@ -35,7 +35,7 @@ export default function FoodList() {
   const deleteFood = async ({ name, _id }) => {
     if (window.confirm(`Are You Sure Delete This Food ${name}`)) {
       try {
-        await axios.delete(`https://pizzas001.herokuapp.com/products/${_id}`, {
+        await axios.delete(`https://pizza-joth.onrender.com/products/${_id}`, {
           _id,
         });
         alert("Deleted Successfully");
@@ -153,7 +153,7 @@ export function AddFoodList() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`https://pizzas001.herokuapp.com/products`, food);
+      await axios.post(`https://pizza-joth.onrender.com/products`, food);
       navigate("/foodList");
     } catch (error) {
       console.log(error.message);
@@ -268,7 +268,7 @@ export function EditFoodList() {
   const editFood = async () => {
     try {
       const { data } = await axios.get(
-        `https://pizzas001.herokuapp.com/products/${id}`
+        `https://pizza-joth.onrender.com/products/${id}`
       );
       setFood(data);
     } catch (error) {
@@ -319,7 +319,7 @@ export function EditFoodForm({ food }) {
       rating: rating,
       offer: offer,
     };
-    fetch(`https://pizzas001.herokuapp.com/products/${food._id}`, {
+    fetch(`https://pizza-joth.onrender.com/products/${food._id}`, {
       method: "PUT",
       body: JSON.stringify(updateFood),
       headers: {

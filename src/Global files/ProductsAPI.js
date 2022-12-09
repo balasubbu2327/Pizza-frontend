@@ -1,4 +1,4 @@
-export const ProductAPI = "https://noodlecountry.herokuapp.com";
+export const ProductAPI = "https://pizza-joth.onrender.com";
 // export const ProductAPI = "https://localhost:5000";
 
 // http://localhost:9092

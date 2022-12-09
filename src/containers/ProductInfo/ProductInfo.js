@@ -18,7 +18,7 @@ export default function ProductInfo() {
   const getProductById = async () => {
     try {
       const { data } = await axios.get(
-        `https://pizzas001.herokuapp.com/products/${id}`
+        `https://pizza-joth.onrender.com/products/${id}`
       );
       setProduct(data);
     } catch (error) {

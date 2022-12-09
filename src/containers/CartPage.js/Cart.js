@@ -26,13 +26,13 @@ export default function Cart() {
 
   async function handleToken(token, addresses) {
     const response = await axios.post(
-      `https://pizzas001.herokuapp.com/checkout/payment`,
+      `https://pizza-joth.onrender.com/checkout/payment`,
       {
         token,
         product,
       }
     );
-    await axios.post(`https://pizzas001.herokuapp.com/orders`, {
+    await axios.post(`https://pizza-joth.onrender.com/orders`, {
       token,
       product,
       total,

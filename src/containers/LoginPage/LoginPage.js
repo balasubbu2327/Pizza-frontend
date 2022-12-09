@@ -41,7 +41,7 @@ export default function LoginPage() {
                   const {
                     data: { authToken },
                   } = await axios.post(
-                    `https://pizzas001.herokuapp.com/auth/login`,
+                    `https://pizza-joth.onrender.com/auth/login`,
                     values
                   );
                   window.localStorage.setItem("authToken", authToken);

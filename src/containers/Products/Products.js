@@ -14,7 +14,7 @@ export default function Products() {
   const getProducts = async () => {
     try {
       const { data } = await axios.get(
-        `https://pizzas001.herokuapp.com/products`
+        `https://pizza-joth.onrender.com/products`
       );
       setProducts(data);
       setIsLoading(false);
